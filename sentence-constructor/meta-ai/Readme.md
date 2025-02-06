@@ -1,15 +1,26 @@
 ## Japanese Primer 
-## meta - AI 
+## meta - AI Powered Assistant Guideline
 
-Due to regional limitations on accessing llama from Meta AI to further our primer use-case for learning LLM/GenAI 
+
+
+
+NOTE: Model selected llama3-70B-instruct <br>
+
+Due to regional limitations on accessing llama from <strong>Meta AI platform </strong> to further our primer use-case for learning LLM/GenAI 
 
 - Because of this technical restriction, we made efforts and opted to look for another platform without restrictions on location access and had the same intended model llama3-70b-instruct we aim to leverage in our tasks 
 
-## Technical Restrictions
+
+
+## Restrictions
 
 --> Dev's choice 
-- Meta AI ** Not accessible from region 
-switched to NVIDIA
+- Meta AI platform ** Not accessible from region 
+--> Next action
+- Switched to NVIDIA Platform
+
+## Prompting Guides
+https://www.llama.com/docs/how-to-guides/prompting/
 
 ## Considerations 
 - Meta AI access is region restricted and as such unfortunately our Propmt work was halted here on that regard 
