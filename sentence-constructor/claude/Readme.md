@@ -27,3 +27,7 @@ https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview
 
 - A key workaround is using image screengrabs for the prompts so as to handle the max character issue, where claude will be able to get the intended context from those screen grabs
 ![claude-prompt-screencapture](./assets/claude_prompt.png)
+
+## Final Remarks
+- We managed to perform all our tasks under the 3.5 sonnet model and through uploading files on examples and screengrabs for prompt instructions, prevented us exceeding the maximum character count that would have easily exhausted the free tier token 
+- Final approach and implementations all done with anthropic's claude 3.5 sonnet. No need to settle for Deepseek's R1 model 
