@@ -1,7 +1,8 @@
 # free-genai-bootcamp-2025
 
 ## Table of contents
-
+With the help of a table of contents markdown generator found at; <br>
+[Generate-Table-of-contents](https://ecotrust-canada.github.io/markdown-toc/)
 ---
 ## GenAI architecture
 ![Conceptual Diagram](./genai-architecting/genai-architecture.png)
@@ -12,7 +13,3 @@
 ---
 
 
-Red squad for those that will go beyond requirements 
-more effort and do more than expected 
-
-critical thinkers, great technical documenters and ships things 
