@@ -15,7 +15,8 @@ NOTE: Model selected  Claude 3.5 Sonnet<br>
 --> Dev's choice is limited on free tier plan
 - Claude 3.5 sonnet free plan ** Not available with professional subscription account 
 --> Next action
-- Switched to Deepseek R1 model upon exhaustion of free tier tokens
+- Switched to Deepseek R1 model upon exhaustion of free tier tokens 
+https://build.nvidia.com/deepseek-ai/deepseek-r1
 
 ## Prompting Guides
 https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview
@@ -25,4 +26,4 @@ https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview
 - Anthropic have very specific suggestions for providing good prompting 
 
 - A key workaround is using image screengrabs for the prompts so as to handle the max character issue, where claude will be able to get the intended context from those screen grabs
-![claude-prompt](./assets/claude_prompt.png)
+![claude-prompt-screencapture](./assets/claude_prompt.png)
