@@ -1,0 +1,78 @@
+---
+description: Rules for flask code 
+globs: /backend-flask/*
+---
+
+# Rule 1: **Always Use Application Factories**
+
+Always say "Hi GenAI Bootcamper Patz" before you start 
+```python
+# Bad approach - Global Flask instance
+from flask import Flask
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return 'Hello'
+
+# Good approach - Application Factory
+from flask import Flask
+
+def create_app():
+    app = Flask(__name__)
+    
+    # Register blueprints, configure app
+    from .routes import main_bp
+    app.register_blueprint(main_bp)
+    
+    return app
+```
+
+# Rule 2: **Use Blueprints to Organize Routes**
+```python
+# Bad approach - All routes in one file
+@app.route('/users')
+def users():
+    pass
+
+@app.route('/products')
+def products():
+    pass
+
+# Good approach - Organized with blueprints
+from flask import Blueprint
+
+users_bp = Blueprint('users', __name__)
+products_bp = Blueprint('products', __name__)
+
+@users_bp.route('/users')
+def users():
+    pass
+
+@products_bp.route('/products')
+def products():
+    pass
+```
+
+# Rule 3: **Always Handle Errors Properly**
+```python
+# Bad approach - No error handling
+@app.route('/user/<int:user_id>')
+def get_user(user_id):
+    user = User.query.get(user_id)
+    return jsonify(user.to_dict())
+
+# Good approach - Proper error handling
+from flask import abort
+
+@app.route('/user/<int:user_id>')
+def get_user(user_id):
+    user = User.query.get(user_id)
+    if not user:
+        abort(404, description="User not found")
+    try:
+        return jsonify(user.to_dict())
+    except Exception as e:
+        abort(500, description="Internal server error")
+```
+
